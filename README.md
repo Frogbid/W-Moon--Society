@@ -1,1 +1,1 @@
-# W-Moon--Society
+# W-moon-Society
