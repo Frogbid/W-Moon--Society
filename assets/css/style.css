@@ -359,7 +359,6 @@ figure:hover img {
 
 .buttonText{
 	color:white;
-	text-align:center;
 	align-items:center;
 	justify-content:center;
 	text-transform:uppercase;
@@ -375,14 +374,41 @@ figure:hover img {
 }
 
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeOut {
+	0%{
+		opacity: 0%;
+	}
+	25%{
+		opacity: 50%;
+	}
+	50%{
+		opacity: 100%;
+	}
+	75%{
+		opacity: 50%;
+	}
+	100%{
+		opacity: 0%;
+	}
+
+}
 
 .fade-in {
 	opacity:0;  /* make things invisible upon start */
 	animation:fadeIn ease-in 1;
 	animation-fill-mode:forwards;
-	animation-duration:2s;
+	animation-duration:3s;
+	animation-delay: 1s;
+}
+
+.fade-out {
+	opacity:0;  /* make things invisible upon start */
+	animation:fadeOut ease-in 1;
+	animation-fill-mode:forwards;
+	animation-duration:4s;
+	animation-delay: 1s;
 }
 
 .fade-in.delayed {
-	animation-delay: 2.5s;
+	animation-delay: 1s;
 }

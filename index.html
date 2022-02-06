@@ -143,16 +143,19 @@
         <div class="container row" style="height: 350px" id="myDiv">
 
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" id="middle">
                     <div class="row">
-                            <div class="col-md-4 text-center">
-                                <div class=""><h2 class="buttonText mt-5 fade-in delayed">ASTRONAUTS<br><span style="font-size: 25px">Please Scroll Up</span></h2></div>
+                            <div class="col-md-4 text-center" id="left">
+                                    <img src="assets/images/up-arrow.gif" class="fade-in delayed" style="width: 100px">
+                                    <h2 class="buttonText mt-5 fade-in delayed">ASTRONAUTS<br><span style="font-size: 25px">Please Scroll Up</span></h2>
                             </div>
-                            <div class="col-md-4 text-center">
-                                <div class=""><h2 class="buttonText mt-5 fade-in" style="font-weight: bold; font-size: 60px">The Moon Society</h2></div>
+                            <div class="col-md-4 text-center" id="image">
+                                <div class=""><img src="assets/images/mooon-logo.png" class="img-fluid fade-out" id="logo" alt="image" style="width:250px;"/></div>
                             </div>
-                            <div class="col-md-4 text-center">
-                                <div class="mb-4"><h2 class="buttonText mt-5 fade-in delayed">NEW RECRUITS<br> <span style="font-size: 25px">Please Scroll Down</span></h2></div>
+                            <div class="col-md-4 text-center" id="right">
+                                <div class="mb-4"><h2 class="buttonText mt-5 fade-in delayed">NEW RECRUITS<br> <span style="font-size: 25px">Please Scroll Down</span></h2>
+                                    <img src="assets/images/down-arrow.gif" class="fade-in delayed" style="width: 100px">
+                                </div>
                             </div>
                     </div>
         </div>
@@ -628,6 +631,19 @@
             scrollTop: $("#myDiv").offset().top
         }, 2000);
     });
+</script>
+<script>
+    var delayInMilliseconds = 5000; //3 second
+
+    setInterval(function() {
+        document.getElementById("middle").classList.remove('container-fluid');
+        document.getElementById("left").classList.remove('col-md-4');
+        document.getElementById("right").classList.remove('col-md-4');
+        document.getElementById("image").style.display = "none";
+        document.getElementById("middle").classList.add('container');
+        document.getElementById("left").classList.add('col-md-6');
+        document.getElementById("right").classList.add('col-md-6');
+    }, delayInMilliseconds);
 </script>
 </body>
 </html>
