@@ -37,11 +37,19 @@ body {
     padding: 1em 2em 1em 0;
     row-gap: 0.5em;
     column-gap: 2em;
-    box-shadow: 0.5em 0.5em 1em rgb(0 0 0), inset 0.05em 0.05em rgb(112 59 109);
     counter-increment: ol-cards-counter -1;
     text-align: left;
-    background-color: #242124;
+    background-color: transparent;
+
 }
+.border-even{
+    border: 1px solid #F721F8;
+}
+
+.border-odd{
+    border: 1px solid #ffffff;
+}
+
 
 .ol-cards.alternate li:nth-child(even) {
     grid-template-areas:
