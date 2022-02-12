@@ -140,8 +140,9 @@
                 </li>
             </ol>
         </div>
-        <div class="container-fluid mx-auto my-auto pb-5 gif-background" id="myDiv">
-
+        <div class="container-fluid mx-auto my-auto pb-5" id="myDiv row">
+            <img src="assets/images/animation.gif" id="image" style="width: 100%">
+            <img src="assets/images/animation-2.gif" id="image2" style="width: 100%">
         </div>
 
     </section>
@@ -613,18 +614,13 @@
         }, 2000);
     });
 </script>
-<!--<script>
-    var delayInMilliseconds = 5000; //3 second
-
+<script>
+    var delayInMilliseconds = 9800; //3 second
+    document.getElementById("image2").style.display = "none";
     setInterval(function() {
-        document.getElementById("middle").classList.remove('container-fluid');
-        document.getElementById("left").classList.remove('col-md-4');
-        document.getElementById("right").classList.remove('col-md-4');
         document.getElementById("image").style.display = "none";
-        document.getElementById("middle").classList.add('container');
-        document.getElementById("left").classList.add('col-md-6');
-        document.getElementById("right").classList.add('col-md-6');
+        document.getElementById("image2").style.display = "block";
     }, delayInMilliseconds);
-</script>-->
+</script>
 </body>
 </html>
