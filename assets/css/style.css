@@ -10,6 +10,13 @@ body {
 	background-repeat: no-repeat;
 }
 
+.gif-background{
+	height: 1080px;
+	width: 100%;
+	background-image: url("../images/animation.gif");
+	background-repeat: no-repeat;
+}
+
 
 
 
