@@ -48,7 +48,8 @@ a, a:hover {
 	color: #ffffff;
 }
 .postcard.dark {
-	background-color: #18151f;
+	background-color: transparent;
+	border: 1px solid #F721F8;
 }
 .postcard.light {
 	background-color: #e1e5ea;

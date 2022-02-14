@@ -43,11 +43,13 @@ body {
 
 }
 .border-even{
-    border: 1px solid #F721F8;
+    border-top: 1px solid #F721F8;
+    border-bottom: 1px solid #F721F8;
 }
 
 .border-odd{
-    border: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 
