@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Moon Society</title>
+    <link rel='stylesheet' href='assets/css/all.min.css'>
+    <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="stylesheet" href="assets/css/style4.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: CustomBigFont;
+            src: url("assets/font/big.woff2");
+        }
+
+        @font-face {
+            font-family: CustomSmallFont;
+            src: url("assets/font/small.woff2");
+        }
+
+        .h1, h2, div {
+            font-family: CustomBigFont;
+        }
+
+        p, h3, td {
+            font-family: CustomSmallFont;
+        }
+
+        .custom-moon {
+            margin-top: -15px;
+            background-image: url("assets/images/moon_1.png");
+            background-repeat: no-repeat;
+        }
+
+        .arrow-bottom,
+        .arrow-bottom:before {
+            position: absolute;
+            left: 50%;
+        }
+
+        .arrow-bottom {
+            width: 50px;
+            height: 50px;
+            top: 65%;
+            margin: -20px 0 0 -20px;
+            -webkit-transform: rotate(45deg);
+            border-left: none;
+            border-top: none;
+            border-right: 5px #fff solid;
+            border-bottom: 5px #fff solid;
+        }
+
+        .arrow-bottom:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            margin: -20px 0 0 -20px;
+            border-left: none;
+            border-top: none;
+            border-right: 3px #fff solid;
+            border-bottom: 3px #fff solid;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-name: arrow-bottom;
+        }
+
+        @keyframes arrow-bottom {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translate(10px, 10px);
+            }
+        }
+
+        .arrow-top,
+        .arrow-top:before {
+            position: absolute;
+            left: 50%;
+        }
+
+        .arrow-top {
+            width: 50px;
+            height: 50px;
+            top: 0%;
+            margin: -20px 0 0 -20px;
+            -webkit-transform: rotate(225deg);
+            border-left: none;
+            border-top: none;
+            border-right: 5px #fff solid;
+            border-bottom: 5px #fff solid;
+        }
+
+        .arrow-top:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            margin: -10px 0 0 -10px;
+            border-left: none;
+            border-top: none;
+            border-right: 3px #fff solid;
+            border-bottom: 3px #fff solid;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-name: arrow-top;
+        }
+
+        @keyframes arrow-top {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translate(10px, 10px);
+            }
+        }
+
+        #float {
+            opacity: 0;
+            position: relative;
+            -webkit-animation: floatBubble 8s normal ease-out;
+            animation: floatBubble 8s normal ease-out;
+        }
+
+        @-webkit-keyframes floatBubble {
+            0% {
+                bottom: 0px;
+                opacity: 0;
+            }
+            50% {
+                bottom: 0px;
+                opacity: 1;
+            }
+            100% {
+                bottom: 500px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes floatBubble {
+            0% {
+                bottom: 0px;
+                opacity: 0;
+            }
+            50% {
+                bottom: 0px;
+                opacity: 1;
+            }
+            100% {
+                bottom: 500px;
+                opacity: 0;
+            }
+        }
+
+        .animateTextLeft {
+            position: relative;
+            -webkit-animation: textAnimLeft 4s normal ease-out;
+            animation: textAnimLeft 4s normal ease-out;
+            animation-delay: 6s;
+        }
+
+        @-webkit-keyframes textAnimLeft {
+            0% {
+                left: 0px;
+            }
+            100% {
+                left: 250px;
+            }
+        }
+
+        @keyframes textAnimLeft {
+            0% {
+                left: 0px;
+            }
+            100% {
+                left: 250px;
+            }
+        }
+
+        .animateTextRight {
+            position: relative;
+            -webkit-animation: textAnimRight 4s normal ease-out;
+            animation: textAnimRight 4s normal ease-out;
+            animation-delay: 6s;
+        }
+
+        @-webkit-keyframes textAnimRight {
+            0% {
+                right: 0px;
+            }
+            100% {
+                right: 250px;
+            }
+        }
+
+        @keyframes textAnimRight {
+            0% {
+                right: 0px;
+            }
+            100% {
+                right: 250px;
+            }
+        }
+    </style>
+</head>
+<body style="">
+
+<div class="custom-moon pt-5">
+    <!--header section starts-->
+    <section class="dark">
+        <div class="container mt-3">
+            <header class="mt-2">
+                <div class="row header-background-image">
+                    <div class="col-md-6 text-left pl-4">
+                        <img src="assets/images/mooon-logo.png" class="img-fluid" alt="image" style="width:200px;"/>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <p class="mt-5 pt-4 pr-5">
+                            <i class="fab fa-discord fa-3x text-white"></i>
+                            <i class="fas fa-file-download fa-3x ml-4 text-white"></i>
+                            <i class="fab fa-apple fa-3x ml-4 text-white"></i>
+                        </p>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </section>
+    <!--header section ends-->
+
+    <!--event section starts-->
+    <section class="dark">
+        <div class="container-fluid-card py-4">
+            <div class="row py-4">
+                <div class="col-md-6 text-right">
+                    <a href="#" class="buttonText" style="font-size: 25px;">Twitter</a>
+                </div>
+                <div class="col-md-6 text-left">
+                    <a href="#" class="buttonText text-left" style="font-size: 25px;">Discord</a>
+                </div>
+            </div>
+            <div class="container-fluid mx-auto">
+                <h1 class="buttonText">The Moon Society</h1>
+            </div>
+
+        </div>
+
+    </section>
+    <!--event section ends-->
+</div>
+
+
+<div>
+
+    <!--cards section starts-->
+    <section class="dark">
+        <div class="container py-4">
+
+            <article class="postcard dark blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title"/>
+                </a>
+                <div class="postcard__text">
+                    <h1 class="postcard__title blue text-left text-center"><a href="#">The Moon Society</a></h1>
+                    <div class="postcard__subtitle small">
+                        <span style="color: #F721F8FF; font-size: 20px">Total Minted 0/5000</span>
+                    </div>
+                    <div class="postcard__bar">
+                    </div>
+                    <div class="row mx-auto">
+                        <span style="font-size: 20px">0.05 Eth + Gas fee <br> Max 20 per transaction</span>
+                    </div>
+                    <div class="row mx-auto">
+                        <form class="form" action="#">
+                            <div class="form__wrap">
+                                <div class="form__row">
+                                    <div class="form__field">
+                                        <button class="form__btn-add input-wrap-left" type="button">-</button>
+                                        <input class="form__input mint-input" type="number" name="#" id="#" value="1">
+                                        <button class="form__btn-add input-wrap-right" type="button">+</button>
+                                    </div>
+                                    <button class="form__btn-value input-five-button" type="button">5</button>
+                                    <button class="form__btn-value input-ten-button" type="button">10</button>
+                                    <button class="form__btn-value input-twenty-button" type="button">20</button>
+                                </div>
+                                <button class="form__btn js-popup-open mb-4" type="button">Connect wallet</button>
+                                <button class="form__btn mint-button" type="button">MINT Chubbs</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!--cards section ends-->
+
+
+    <!--footer section starts-->
+    <section class="dark">
+        <div class="container">
+
+            <footer class="mt-5 pt-5 big-font pb-3">
+                <div class="row text-center text-white">
+                    <div class="col-4">
+                        LGL NTC
+                    </div>
+                    <div class="col-4">
+                        TRMS & CNDTNS
+                    </div>
+                    <div class="col-4">
+                        PRVCY PL
+                    </div>
+                    <div class="col-12 mt-5">
+                        © 2022 BY 10CT | All Rights Reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <!--footer section ends-->
+</div>
+
+
+<!-- partial -->
+<script src='assets/js/jquery.min.js'></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
