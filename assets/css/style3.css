@@ -74,7 +74,7 @@ body {
 }
 
 .ol-cards li .step::before {
-    content: "Event - " counter(ol-cards-counter);
+    content: "Stage - " counter(ol-cards-counter);
     flex: 1;
     align-self: center;
     color: var(--ol-cards-color-bg);
